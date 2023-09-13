@@ -1,0 +1,358 @@
+Analysis & Synthesis report for TEC498_CONTROLADOR
+Wed Sep 13 12:57:04 2023
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Analysis & Synthesis Messages
+ 10. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Wed Sep 13 12:57:04 2023       ;
+; Quartus Prime Version       ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name               ; TEC498_CONTROLADOR                          ;
+; Top-level Entity Name       ; main_circuit                                ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 94                                          ;
+; Total pins                  ; 39                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM240T100C5       ;                    ;
+; Top-level entity name                                            ; main_circuit       ; TEC498_CONTROLADOR ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+; autenticate_user.v               ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_user.v       ;         ;
+; autenticate_permission.v         ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v ;         ;
+; convert_user.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/convert_user.v           ;         ;
+; compare_users.v                  ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/compare_users.v          ;         ;
+; compare_funcionality.v           ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/compare_funcionality.v   ;         ;
+; verify_auto.v                    ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/verify_auto.v            ;         ;
+; output_controller.v              ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/output_controller.v      ;         ;
+; verify_funcionality2.v           ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/verify_funcionality2.v   ;         ;
+; matrix_decoder.v                 ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v         ;         ;
+; leds_decoder.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/leds_decoder.v           ;         ;
+; display_decoder.v                ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/display_decoder.v        ;         ;
+; main_circuit.v                   ; yes             ; User Verilog HDL File  ; /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v           ;         ;
++----------------------------------+-----------------+------------------------+------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 94    ;
+;     -- Combinational with no register       ; 94    ;
+;     -- Register only                        ; 0     ;
+;     -- Combinational with a register        ; 0     ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 67    ;
+;     -- 3 input functions                    ; 21    ;
+;     -- 2 input functions                    ; 6     ;
+;     -- 1 input functions                    ; 0     ;
+;     -- 0 input functions                    ; 0     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 94    ;
+;     -- arithmetic mode                      ; 0     ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 0     ;
+;     -- asynchronous clear/load mode         ; 0     ;
+;                                             ;       ;
+; Total registers                             ; 0     ;
+; I/O pins                                    ; 39    ;
+; Maximum fan-out node                        ; U2[0] ;
+; Maximum fan-out                             ; 16    ;
+; Total fan-out                               ; 363   ;
+; Average fan-out                             ; 2.73  ;
++---------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                             ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node          ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name                          ; Entity Name            ; Library Name ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------+------------------------+--------------+
+; |main_circuit                       ; 94 (0)      ; 0            ; 0          ; 39   ; 0            ; 94 (0)       ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit                                ; main_circuit           ; work         ;
+;    |autenticate_permission:comb_10| ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|autenticate_permission:comb_10 ; autenticate_permission ; work         ;
+;    |autenticate_permission:comb_9|  ; 9 (9)       ; 0            ; 0          ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|autenticate_permission:comb_9  ; autenticate_permission ; work         ;
+;    |compare_funcionality:comb_11|   ; 10 (10)     ; 0            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|compare_funcionality:comb_11   ; compare_funcionality   ; work         ;
+;    |compare_users:comb_8|           ; 3 (3)       ; 0            ; 0          ; 0    ; 0            ; 3 (3)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|compare_users:comb_8           ; compare_users          ; work         ;
+;    |convert_user:comb_6|            ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|convert_user:comb_6            ; convert_user           ; work         ;
+;    |convert_user:comb_7|            ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|convert_user:comb_7            ; convert_user           ; work         ;
+;    |display_decoder:comb_17|        ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|display_decoder:comb_17        ; display_decoder        ; work         ;
+;    |leds_decoder:comb_15|           ; 11 (11)     ; 0            ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|leds_decoder:comb_15           ; leds_decoder           ; work         ;
+;    |matrix_decoder:comb_14|         ; 14 (14)     ; 0            ; 0          ; 0    ; 0            ; 14 (14)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|matrix_decoder:comb_14         ; matrix_decoder         ; work         ;
+;    |output_controller:comb_12|      ; 6 (6)       ; 0            ; 0          ; 0    ; 0            ; 6 (6)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|output_controller:comb_12      ; output_controller      ; work         ;
+;    |output_controller:comb_13|      ; 10 (10)     ; 0            ; 0          ; 0    ; 0            ; 10 (10)      ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|output_controller:comb_13      ; output_controller      ; work         ;
+;    |verify_auto:comb_5|             ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|verify_auto:comb_5             ; verify_auto            ; work         ;
+;    |verify_funcionality2:comb_16|   ; 2 (2)       ; 0            ; 0          ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 0 (0)            ; 0 (0)           ; 0 (0)      ; |main_circuit|verify_funcionality2:comb_16   ; verify_funcionality2   ; work         ;
++-------------------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------------------------+------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Sep 13 12:56:57 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TEC498_CONTROLADOR -c TEC498_CONTROLADOR
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file autenticate_user.v
+    Info (12023): Found entity 1: autenticate_user File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_user.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file autenticate_permission.v
+    Info (12023): Found entity 1: autenticate_permission File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file convert_user.v
+    Info (12023): Found entity 1: convert_user File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/convert_user.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file compare_users.v
+    Info (12023): Found entity 1: compare_users File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/compare_users.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file compare_funcionality.v
+    Info (12023): Found entity 1: compare_funcionality File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/compare_funcionality.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file verify_auto.v
+    Info (12023): Found entity 1: verify_auto File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/verify_auto.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file output_controller.v
+    Info (12023): Found entity 1: output_controller File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/output_controller.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file verify_funcionality2.v
+    Info (12023): Found entity 1: verify_funcionality2 File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/verify_funcionality2.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file matrix_decoder.v
+    Info (12023): Found entity 1: matrix_decoder File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file leds_decoder.v
+    Info (12023): Found entity 1: leds_decoder File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/leds_decoder.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file display_decoder.v
+    Info (12023): Found entity 1: display_decoder File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/display_decoder.v Line: 3
+Info (12021): Found 1 design units, including 1 entities, in source file main_circuit.v
+    Info (12023): Found entity 1: main_circuit File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 3
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_user.v(11): created implicit net for "not_U0" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_user.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_user.v(12): created implicit net for "not_U1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_user.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_user.v(13): created implicit net for "not_U2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_user.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(20): created implicit net for "T1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(21): created implicit net for "T2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(22): created implicit net for "T3" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(26): created implicit net for "G1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 26
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(27): created implicit net for "G2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 27
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(28): created implicit net for "G3" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(29): created implicit net for "G4" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(30): created implicit net for "G5" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(34): created implicit net for "W1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(35): created implicit net for "W2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 35
+Warning (10236): Verilog HDL Implicit Net warning at autenticate_permission.v(36): created implicit net for "W3" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at compare_funcionality.v(34): created implicit net for "F10" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/compare_funcionality.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(23): created implicit net for "T1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(24): created implicit net for "T2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(28): created implicit net for "H1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 28
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(29): created implicit net for "H2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 29
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(33): created implicit net for "G1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(34): created implicit net for "G2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 34
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(38): created implicit net for "W1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 38
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(39): created implicit net for "W2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(43): created implicit net for "J1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(44): created implicit net for "J2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 44
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(48): created implicit net for "D1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 48
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(49): created implicit net for "D2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 49
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(53): created implicit net for "U1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 53
+Warning (10236): Verilog HDL Implicit Net warning at matrix_decoder.v(54): created implicit net for "U2" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/matrix_decoder.v Line: 54
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(20): created implicit net for "not_U10" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/display_decoder.v Line: 20
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(21): created implicit net for "not_U11" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/display_decoder.v Line: 21
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(22): created implicit net for "not_U20" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/display_decoder.v Line: 22
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(23): created implicit net for "not_U21" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/display_decoder.v Line: 23
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(24): created implicit net for "not_F0" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/display_decoder.v Line: 24
+Warning (10236): Verilog HDL Implicit Net warning at display_decoder.v(25): created implicit net for "not_F1" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/display_decoder.v Line: 25
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(33): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 33
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(34): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 34
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(37): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 37
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(40): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 40
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(41): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 41
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(44): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 44
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(47): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 47
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(48): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 48
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(51): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 51
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(54): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 54
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(55): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 55
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(58): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 58
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(61): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 61
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(64): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 64
+Critical Warning (10846): Verilog HDL Instantiation warning at main_circuit.v(65): instance has no name File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 65
+Info (12127): Elaborating entity "main_circuit" for the top level hierarchy
+Info (12128): Elaborating entity "autenticate_user" for hierarchy "autenticate_user:comb_3" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 33
+Info (12128): Elaborating entity "verify_auto" for hierarchy "verify_auto:comb_5" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 37
+Info (12128): Elaborating entity "convert_user" for hierarchy "convert_user:comb_6" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 40
+Info (12128): Elaborating entity "compare_users" for hierarchy "compare_users:comb_8" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 44
+Info (12128): Elaborating entity "autenticate_permission" for hierarchy "autenticate_permission:comb_9" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 47
+Info (12128): Elaborating entity "compare_funcionality" for hierarchy "compare_funcionality:comb_11" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 51
+Warning (10030): Net "F10" at compare_funcionality.v(34) has no driver or initial value, using a default initial value '0' File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/compare_funcionality.v Line: 34
+Info (12128): Elaborating entity "output_controller" for hierarchy "output_controller:comb_12" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 54
+Info (12128): Elaborating entity "matrix_decoder" for hierarchy "matrix_decoder:comb_14" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 58
+Info (12128): Elaborating entity "leds_decoder" for hierarchy "leds_decoder:comb_15" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 61
+Info (12128): Elaborating entity "verify_funcionality2" for hierarchy "verify_funcionality2:comb_16" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 64
+Info (12128): Elaborating entity "display_decoder" for hierarchy "display_decoder:comb_17" File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 65
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "MATX_COLUNA" is stuck at VCC File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 11
+    Warning (13410): Pin "LED_RGB[2]" is stuck at GND File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 12
+    Warning (13410): Pin "DIG[0]" is stuck at GND File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 14
+    Warning (13410): Pin "DIG[1]" is stuck at VCC File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 14
+    Warning (13410): Pin "DIG[2]" is stuck at VCC File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 14
+    Warning (13410): Pin "DIG[3]" is stuck at VCC File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 14
+    Warning (13410): Pin "DP" is stuck at VCC File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/main_circuit.v Line: 15
+Info (21057): Implemented 133 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 27 output pins
+    Info (21061): Implemented 94 logic cells
+Info (144001): Generated suppressed messages file /home/aluno/Downloads/TEC498_CONTROLADOR-main/output_files/TEC498_CONTROLADOR.map.smsg
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 60 warnings
+    Info: Peak virtual memory: 341 megabytes
+    Info: Processing ended: Wed Sep 13 12:57:04 2023
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:12
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/aluno/Downloads/TEC498_CONTROLADOR-main/output_files/TEC498_CONTROLADOR.map.smsg.
+
+

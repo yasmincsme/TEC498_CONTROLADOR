@@ -1,0 +1,3 @@
+Info (10281): Verilog HDL Declaration information at autenticate_permission.v(6): object "F" differs only in case from object "f" in the same scope File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/autenticate_permission.v Line: 6
+Info (10281): Verilog HDL Declaration information at compare_funcionality.v(5): object "F1" differs only in case from object "f1" in the same scope File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/compare_funcionality.v Line: 5
+Info (10281): Verilog HDL Declaration information at compare_funcionality.v(6): object "F2" differs only in case from object "f2" in the same scope File: /home/aluno/Downloads/TEC498_CONTROLADOR-main/compare_funcionality.v Line: 6
